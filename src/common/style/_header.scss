@@ -1,0 +1,28 @@
+:root {
+  --header-height: 70px;
+}
+.header {
+  min-height: var(--header-height);
+  background: #a7a9be;
+  &__nav {
+    height: var(--header-height);
+    padding: 0 10px;
+  }
+  &__list {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__link {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f0e17;
+    padding: 5px;
+    &:hover {
+      color: #e53170;
+    }
+  }
+}

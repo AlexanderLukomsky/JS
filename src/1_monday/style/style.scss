@@ -1,0 +1,53 @@
+@import "../../common/style/common";
+@import "../../common/style/common-container";
+@import "../../common/style/header";
+
+.link-preventDefault {
+  color: aliceblue;
+}
+.big {
+  padding: 70px;
+  background: #bae8e8;
+}
+.medium {
+  padding: 70px;
+  background: #ff8906;
+}
+.small {
+  width: 120px;
+  height: 120px;
+  background: #e53170;
+  &-inner {
+    position: absolute;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background: #b8c1ec;
+  }
+}
+.big,
+.medium,
+.small {
+  border-radius: 4px;
+  border: 3px solid #9656a1;
+}
+
+.buttons-row {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  padding: 10px;
+  background-color: aliceblue;
+  & > button {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid #000;
+    & > div {
+      width: 30px;
+      height: 30px;
+      background-color: orange;
+    }
+  }
+}

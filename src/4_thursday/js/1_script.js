@@ -1,0 +1,1 @@
+(function thursday_1() {})();

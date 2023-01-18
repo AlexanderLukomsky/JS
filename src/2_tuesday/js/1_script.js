@@ -75,4 +75,67 @@
 
   // console.log([5, 1, 7, 4].reduce((a, b) => a + b, 1));
   //  console.log(likeReduce(nums, callback, []));
+
+  const arr3 = [1, 2, 3, 4, 4, 3, 6, 1, 4, 5, 9];
+
+  const sortedArr = array => {
+    const unique = [];
+    const obj = {};
+
+    for (let i = 0; i < array.length; i++) {
+      const currentElement = array[i];
+
+      if (!(currentElement in obj)) {
+        obj[currentElement] = 1;
+      } else {
+        obj[currentElement] += 1;
+      }
+    }
+    Object.keys(obj).forEach(key => {
+      if (obj[key] === 1) {
+        unique.push(+key);
+      }
+    });
+
+    return unique;
+  };
+
+  //console.log(sortedArr(arr3));
+
+  const str = '((((()))))({})[][{()}]';
+  const obj = {
+    '(': ')',
+    '{': '}',
+    '[': ']',
+  };
+  const stack = [];
+
+  const checkCompliance = str => {
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === '(' || str[i] === '{' || str[i] === '[') {
+        stack.push(str[i]);
+      } else {
+        if (stack.length) {
+          const lastElement = stack.pop();
+
+          if (obj[lastElement] !== str[i]) {
+            return false;
+          }
+        } else {
+          return false;
+        }
+      }
+    }
+    if (stack.length) {
+      return false;
+    }
+
+    return true;
+  };
+
+  //console.log(checkCompliance(str));
+
+  const date = new Date().getFullYear();
+
+  console.log(date);
 })();

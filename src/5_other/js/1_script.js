@@ -139,13 +139,13 @@
       };
     },
   };
-  const iter = user.gen();
+  // const iter = user.gen();
 
-  console.log(iter.next());
-  console.log(iter.next());
-  console.log(iter.next());
-  console.log(iter.next());
-  console.log(iter.next());
+  // console.log(iter.next());
+  // console.log(iter.next());
+  // console.log(iter.next());
+  // console.log(iter.next());
+  // console.log(iter.next());
 
   for (const key of user) {
     console.log(key);

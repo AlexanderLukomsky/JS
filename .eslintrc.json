@@ -55,5 +55,11 @@
         "extensions": [".js"]
       }
     }
-  }
+  },
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    }
+  ]
 }
